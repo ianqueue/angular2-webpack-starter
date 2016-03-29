@@ -26,11 +26,13 @@ import {XLarge} from './directives/x-large';
   template: require('./home.html')
 })
 export class Home {
+  value: string;
+
   // Set our default values
-  localState = { value: '' };
+  localState = { value: '' }
   // TypeScript public modifiers
   constructor(public appState: AppState, public title: Title) {
-
+    this.value = ''
   }
 
   ngOnInit() {
